@@ -34,12 +34,14 @@ It aims to solve the problem ** Why do so many women leave their careers in STEM
 * Lack of mentorship and motivation
 * Imposter Syndromel help you to get feedback. 
 
-<br>
-<img src="" width="700" height="500" >
 
 ### What it does
-Sista is a web application with an integrated Machine Learning model where young girls can get exposure to various tech communities based on their interests. They will be mentored along with other fellow peers with a group of mentors cum their female role models. This would not only instill in them a love of technology at a very young age but also would eradicate problems like lack of motivation, guidance, and imposter syndrome.  
+Sista is a web application with an integrated Machine Learning model where young girls can get exposure to various tech communities based on their interests. They will be mentored along with other fellow peers with a group of mentors cum their female role models. This would not only instill in them a love of technology at a very young age but also would eradicate problems like lack of motivation, guidance, and imposter syndrome. 
 
+<br>
+<img src="https://github.com/prachi237/Sista/blob/master/Screenshot%20(271).png" width="600" height="400" >
+
+<img src="https://github.com/prachi237/Sista/blob/master/Screenshot%20(272).png" width="600" height="400" >
 ## How we built it
 * Figma: After brainstorming many ideas, we moved on to wireframing in Figma, starting with lo-fidelity and working together to create clickable interactions on the high fidelity prototype.
 
