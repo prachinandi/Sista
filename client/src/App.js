@@ -2,21 +2,24 @@ import "./App.css";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Register from "./components/Register";
 
 function App() {
-    return (
-        <div className="App">
-            <Navbar></Navbar>
-            <Container></Container>
-            <Footer></Footer>
-        </div>
-    );
+  return (
+    <div className="App">
+      <Navbar></Navbar>
+      <Container>
+        <Register />
+      </Container>
+      <Footer></Footer>
+    </div>
+  );
 }
 
 const Container = styled.div`
-    background-color: white;
-    min-height: 100vh;
-    max-width: 100vw;
+  background-color: white;
+  min-height: 100vh;
+  max-width: 100vw;
 `;
 
 export default App;
