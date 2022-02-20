@@ -2,9 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faGithub, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import {
+  faFacebookF,
+  faGithub,
+  faInstagram,
+  faLinkedinIn,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
-const image = 'https://res.cloudinary.com/sambitsankalp/image/upload/v1645337230/stormhacks/Background_kjasm3.png';
+const image =
+  'https://res.cloudinary.com/sambitsankalp/image/upload/v1645337230/stormhacks/Background_kjasm3.png';
 
 const ImageContainer = styled.div`
   background-image: url(${image});
@@ -19,8 +27,9 @@ const ImageContainer = styled.div`
 `;
 
 const TextName = styled.h2`
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-    'Montserrat', 'Helvetica Neue', sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Montserrat', 'Helvetica Neue',
+    sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
@@ -30,8 +39,9 @@ const TextName = styled.h2`
 `;
 
 const Description = styled.p`
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-    'Montserrat', 'Helvetica Neue', sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Montserrat', 'Helvetica Neue',
+    sans-serif;
   font-style: normal;
   font-size: 20px;
   text-align: center;
@@ -40,15 +50,16 @@ const Description = styled.p`
   color: #000000;
 `;
 
-
 const Titles = styled.p`
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-    'Montserrat', 'Helvetica Neue', sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Montserrat', 'Helvetica Neue',
+    sans-serif;
   font-style: normal;
   font-size: 26px;
   font-weight: 600;
   text-align: center;
   margin: 0px;
+  margin-top: 10px;
   padding: 0px 30px;
   color: #000000;
 `;
@@ -104,22 +115,27 @@ const links = [
 ];
 
 const ProfileCard = () => (
-  <ImageContainer>
-    <TextName>Prachi Nandi</TextName>
-    <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut placerat nibh.</Description>
-    <Titles>Expertise</Titles>
-    <HorizontalLine />
-    <Description>Web Developer(MERN)</Description>
-    <Titles>Socials</Titles>
-    <HorizontalLine />
-    <LinkContainer>
-      {links.map(({ link, icon }) => (
-        <a key={link} href={link} target='_blank' rel='noreferrer'>
-          <FontAwesomeIcon className='icon' icon={icon} />
-        </a>
-      ))}
-    </LinkContainer>
-  </ImageContainer>
+  <Link style={{ textDecoration: 'none' }} to="/profile">
+    <ImageContainer>
+      <TextName>Prachi Nandi</TextName>
+      <Description>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut placerat
+        nibh.
+      </Description>
+      <Titles>Expertise</Titles>
+      <HorizontalLine />
+      <Description>Web Developer(MERN)</Description>
+      <Titles>Socials</Titles>
+      <HorizontalLine />
+      <LinkContainer>
+        {links.map(({ link, icon }) => (
+          <a key={link} href={link} target="_blank" rel="noreferrer">
+            <FontAwesomeIcon className="icon" icon={icon} />
+          </a>
+        ))}
+      </LinkContainer>
+    </ImageContainer>
+  </Link>
 );
 
 export default ProfileCard;

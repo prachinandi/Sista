@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useContext, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import AuthContext from '../store/AuthContext';
