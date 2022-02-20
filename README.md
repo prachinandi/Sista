@@ -13,9 +13,9 @@ Figma Link: [link]()
 <!-- Details goes here -->
 
 
-# Aimed for- Girls Hoo Hackathon
+# Aimed for- Sista
 <p align="center">
-<img src="![image](https://user-images.githubusercontent.com/72700861/154840332-cdf7552c-4387-48f3-aa8b-3f3e0a3c18a4.png)" width="700" height="200" >
+<img src="![image](https://github.com/prachi237/Sista/blob/master/full_width.png)" width="700" height="200" >
 </p>
 
 ## Inspiration
