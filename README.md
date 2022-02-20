@@ -64,6 +64,11 @@ Sista is a web application with an integrated Machine Learning model where young
 * The very first thing we all learned was teamwork.  We thought about the various problems around us and came up with a solution that we could build in the given time. 
 * The second thing we could implement Machine Learning Algorithm to our project.
 We learned better tactics of collaboration and brainstorming. We also learned a lot of facts about mental health while researching, that we were unaware of. We learned about the problems people with mental illnesses face and what solutions they have available.
+
+## Our Website
+ <img src="https://res.cloudinary.com/ratnakar5938/image/upload/v1645377697/stormhack/Screenshot_38_pucgr7.png">
+ <img src="https://res.cloudinary.com/ratnakar5938/image/upload/v1645377706/stormhack/Screenshot_40_opb88m.png">
+ 
 ## What's next for Sista
 We want to add more functionality and flexibility to our web application. Integrating Machine learning model to our application with a dataset of people with common interest. We would like to approach women tech leaders, volunteers who are passionate about women in STEM, and organizations for collaboration so that they can support and mentor women through our web application. We plan to add a chat server API.
 
