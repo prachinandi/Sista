@@ -12,6 +12,7 @@ import Login from "./components/Login";
 import Cohorts from "./components/Cohorts";
 import Register from "./components/Register";
 import SuggestionPage from "./components/views/SuggestionPage";
+import Profile from "./components/Profile";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/" element={<Homepage />} />
           <Route exact path="/projects" element={<Projects />} />
           <Route exact path="/cohorts" element={<Cohorts />} />
+          <Route exact path="/profile" element={<Profile />} />
           <Route exact path="/cohorts/team-asphalt" element={<Community />} />
           <Route exact path="/register/details" element={<AuthDetails />} />
           <Route exact path="/register" element={<Register />} />
@@ -30,6 +32,7 @@ function App() {
           <Route exact path="/register/signup" element={<SignUp />} />
           <Route exact path="/register/signin" element={<Login />} />
         </Routes>
+
         <Footer />
       </Router>
     </div>
