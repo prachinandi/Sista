@@ -16,8 +16,6 @@ import {
 } from "./Register";
 
 const Login = () => {
-  const [isLoading, setIsLoading] = useState(false);
-
   const profileCtx = useContext(AuthContext);
 
   const emailRef = useRef();
@@ -46,7 +44,6 @@ const Login = () => {
       },
     })
       .then((res) => {
-        setIsLoading(false);
         if (res.ok) {
           return res.json();
           //....
@@ -69,7 +66,7 @@ const Login = () => {
   return (
     <Container>
       <SubContainer>
-        <SubHeading style={{ textAlign: "left" }}>Welcome to,Sista</SubHeading>
+        <SubHeading style={{ textAlign: "left" }}>Welcome back</SubHeading>
         <UnderLine style={{ margin: 0 }} />
         <PopupContainer>
           <PopupContainerLeft>
@@ -78,8 +75,13 @@ const Login = () => {
               <AuthInput ref={passwordRef} placeholder="Password" />
               <Button>Proceed Now -&gt;</Button>
               <LinkText>
-                Didn't registered yet?
-                <a href="/register/signup">Sign up here</a>
+                Didn't registered yet? &nbsp;&nbsp;
+                <a
+                  style={{ textDecoration: "inherit" }}
+                  href="/register/signup"
+                >
+                  Sign up here
+                </a>
               </LinkText>
             </AuthForm>
           </PopupContainerLeft>

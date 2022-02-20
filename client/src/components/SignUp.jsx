@@ -14,9 +14,8 @@ import {
   SubHeading,
   UnderLine,
 } from "./Register";
-const SignUp = () => {
-  const [isLoading, setIsLoading] = useState(false);
 
+const SignUp = () => {
   const profileCtx = useContext(AuthContext);
 
   const emailRef = useRef();
@@ -47,7 +46,6 @@ const SignUp = () => {
       },
     })
       .then((res) => {
-        setIsLoading(false);
         if (res.ok) {
           return res.json();
           //....
@@ -98,7 +96,13 @@ const SignUp = () => {
               <AuthInput ref={passwordRef} placeholder="Password" />
               <Button>Proceed Now -&gt;</Button>
               <LinkText>
-                Already registered? <a href="/register/login">Sign in here</a>
+                Already registered?&nbsp;&nbsp;{" "}
+                <a
+                  style={{ textDecoration: "inherit" }}
+                  href="/register/signin"
+                >
+                  Sign in here
+                </a>
               </LinkText>
             </AuthForm>
           </PopupContainerLeft>
