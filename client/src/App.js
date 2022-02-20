@@ -6,6 +6,7 @@ import Homepage from './components/Homepage';
 
 import Community from './components/views/Community';
 import AuthDetails from './components/views/AuthDetails';
+import Register from './components/Register';
 
 function App() {
   return (
@@ -17,18 +18,13 @@ function App() {
           <Route exact path="/" element={<Homepage />} />
           <Route exact path="/cohorts/team-asphalt" element={<Community />} />
           <Route exact path="/register/details" element={<AuthDetails />} />
+          <Route exact path="/register/" element={<Register />} />
         </Routes>
-
         <Footer />
       </Router>
     </div>
   );
 }
 
-const Container = styled.div`
-  background-color: white;
-  min-height: 100vh;
-  max-width: 100vw;
-`;
 
 export default App;
