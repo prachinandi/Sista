@@ -207,6 +207,7 @@ const CopyRight = styled.div`
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: small;
+    text-align: center;
 `;
 
 export default Footer;
