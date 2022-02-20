@@ -7,7 +7,7 @@
 <!-- Banner goes here -->
 
 # Sista
-[![Youtube Video](https://github.com/nayakastha/feelings/blob/main/assets/feelings.png)](https://www.youtube.com/watch?v=7IYDOeNZfno&t=23s)
+[![Youtube Video](https://github.com/prachi237/Sista/blob/master/Screenshot%20(270).png)](https://www.youtube.com/watch?v=7IYDOeNZfno&t=23s)
 <br>
 Figma Link: [link](https://www.figma.com/proto/9zZOHMNSKaL7wz1fA0TMlM/StormHacks?node-id=1%3A15&scaling=min-zoom&starting-point-node-id=1%3A15)
 <!-- Details goes here -->
