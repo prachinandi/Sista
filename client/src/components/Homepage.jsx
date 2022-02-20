@@ -12,7 +12,7 @@ function Homepage() {
         <HomeContainer>
             <HomeHead>
                 <Heading>&lt;&gt;Women&lt;/&gt;</Heading>
-                <SubHeading style={{ marginBottom: "40px" }}>
+                <SubHeading style={{ marginBottom: "40px", textAlign: "center" }}>
                     are the Technologies of the World.
                 </SubHeading>
                 <BackgroundImage src={homeImg} />
@@ -44,7 +44,7 @@ function Homepage() {
                     <ExploreImage src={cohortImg} />
                     <ExploreText>
                         <Quote>Find your suitable cohort</Quote>
-                        <SubHeading>
+                        <SubHeading style={{ textAlign: "left" }}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. Ut ut placerat nibh. Fusce in lorem euismod,
                             interdum neque at, scelerisque erat.
@@ -89,6 +89,7 @@ const HomeHead = styled.div`
 const QuoteContainer = styled.div`
     background-color: #faf7f7;
     position: relative;
+    text-align: center;
     top: -45px;
     margin: 0 50px;
     border-radius: 10px;
@@ -115,7 +116,7 @@ export const SubHeading = styled.h1`
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: x-large;
     font-weight: 500;
-    text-align: center;
+    text-align: right;
 `;
 
 const BackgroundImage = styled.img`
