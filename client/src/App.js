@@ -13,14 +13,22 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
+
           <Route exact path="/" element={<Homepage />} />
           <Route exact path="/cohorts/team-asphalt" element={<Community />} />
           <Route exact path="/register/details" element={<AuthDetails />} />
         </Routes>
+
         <Footer />
       </Router>
     </div>
   );
 }
+
+const Container = styled.div`
+  background-color: white;
+  min-height: 100vh;
+  max-width: 100vw;
+`;
 
 export default App;
