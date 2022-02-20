@@ -15,7 +15,7 @@ Figma Link: [link]()
 
 # Aimed for- Sista
 <p align="center">
-<img src="https://github.com/prachi237/Sista/blob/master/full_width.png" width="700" height="200" >
+<img src="https://github.com/prachi237/Sista/blob/master/full_width.png" width="750" height="200" >
 </p>
 
 ## Inspiration
