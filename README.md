@@ -42,7 +42,7 @@ We want to bridge this gap thus we came up with a social media App named “Codh
 One of the coolest features of our web application is that you can share your projects, ideas, thoughts through posts, reels. It will appear in the feed of your connections. They can like and comment which will help you to get feedback. 
 
 <br>
-<img src="https://github.com/prachi237/Codhersgram/blob/master/assets/Screenshot%20(11).png" width="700" height="500" >
+<img src="" width="700" height="500" >
 
 # Challenges we faced:
 
