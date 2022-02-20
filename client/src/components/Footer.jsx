@@ -143,14 +143,15 @@ export const Specific = styled.span`
 `;
 
 const Paragraph = styled.p`
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
     text-align: left;
+    font-weight: 500;
     width: 80%;
     margin-top: 8px;
 `;
 
 const SectionLink = styled.a`
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
     text-align: left;
     text-decoration: none;
     color: black;
