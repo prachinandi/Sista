@@ -1,6 +1,7 @@
-import React, { useContext, useRef, useState } from "react";
-import styled from "styled-components";
-import AuthContext from "../store/AuthContext";
+import React, { useContext, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import AuthContext from '../store/AuthContext';
 import {
   Button,
   Container,
@@ -13,7 +14,7 @@ import {
   SubContainer,
   SubHeading,
   UnderLine,
-} from "./Register";
+} from './Register';
 
 const SignUp = () => {
   const profileCtx = useContext(AuthContext);
@@ -32,17 +33,17 @@ const SignUp = () => {
     let token;
 
     let url =
-      "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyA9qngTQ2kQOuahg4Y6ZodqIBo-sTXXvDI";
+      'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyA9qngTQ2kQOuahg4Y6ZodqIBo-sTXXvDI';
 
     fetch(url, {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify({
         email: enteredEmail,
         password: enteredPassword,
         returnSecureToken: true,
       }),
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     })
       .then((res) => {
@@ -51,7 +52,7 @@ const SignUp = () => {
           //....
         } else {
           return res.json().then((data) => {
-            let errorMessage = "Authentication failed";
+            let errorMessage = 'Authentication failed';
 
             throw new Error(errorMessage);
           });
@@ -60,17 +61,17 @@ const SignUp = () => {
       .then((data) => {
         token = data.idToken;
         fetch(
-          "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyA9qngTQ2kQOuahg4Y6ZodqIBo-sTXXvDI",
+          'https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyA9qngTQ2kQOuahg4Y6ZodqIBo-sTXXvDI',
           {
-            method: "POST",
+            method: 'POST',
             body: JSON.stringify({
               idToken: data.idToken,
               displayName: enteredUserName,
-              photoUrl: "",
+              photoUrl: '',
               returnSecureToken: false,
             }),
             headers: {
-              "Content-Type": "application/json",
+              'Content-Type': 'application/json',
             },
           }
         )
@@ -86,7 +87,7 @@ const SignUp = () => {
   return (
     <Container>
       <SubContainer>
-        <SubHeading style={{ textAlign: "left" }}>Welcome to,Sista</SubHeading>
+        <SubHeading style={{ textAlign: 'left' }}>Welcome to,Sista</SubHeading>
         <UnderLine style={{ margin: 0 }} />
         <PopupContainer>
           <PopupContainerLeft>
@@ -94,11 +95,13 @@ const SignUp = () => {
               <AuthInput ref={userNameRef} placeholder="userName" />
               <AuthInput ref={emailRef} placeholder="email" />
               <AuthInput ref={passwordRef} placeholder="Password" />
-              <Button>Proceed Now -&gt;</Button>
+              <Link to="/register/signup/details">
+                <Button>Proceed Next -&gt;</Button>
+              </Link>
               <LinkText>
-                Already registered?&nbsp;&nbsp;{" "}
+                Already registered?&nbsp;&nbsp;{' '}
                 <a
-                  style={{ textDecoration: "inherit" }}
+                  style={{ textDecoration: 'inherit' }}
                   href="/register/signin"
                 >
                   Sign in here
@@ -108,25 +111,25 @@ const SignUp = () => {
           </PopupContainerLeft>
           <Divider />
           <PopupContainerRight>
-            <SubHeading style={{ textAlign: "left" }}>Mentee Roles</SubHeading>
+            <SubHeading style={{ textAlign: 'left' }}>Your Roles</SubHeading>
             <ListItems>
-              <li style={{ margin: "5px 0" }}>
+              <li style={{ margin: '5px 0' }}>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo,
                 a!
               </li>
-              <li style={{ margin: "5px 0" }}>
+              <li style={{ margin: '5px 0' }}>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo,
                 a!
               </li>
-              <li style={{ margin: "5px 0" }}>
+              <li style={{ margin: '5px 0' }}>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo,
                 a!
               </li>
-              <li style={{ margin: "5px 0" }}>
+              <li style={{ margin: '5px 0' }}>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo,
                 a!
               </li>
-              <li style={{ margin: "5px 0" }}>
+              <li style={{ margin: '5px 0' }}>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo,
                 a!
               </li>
