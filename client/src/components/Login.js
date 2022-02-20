@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useRef } from "react";
 import styled from "styled-components";
 import AuthContext from "../store/AuthContext";
 import {
@@ -26,8 +26,6 @@ const Login = () => {
 
     const enteredEmail = emailRef.current.value;
     const enteredPassword = passwordRef.current.value;
-
-    let token;
 
     let url =
       "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA9qngTQ2kQOuahg4Y6ZodqIBo-sTXXvDI";
