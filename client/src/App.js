@@ -2,9 +2,9 @@ import './App.css';
 import styled from 'styled-components';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer';
 
 import Community from './components/views/Community';
-
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Routes>
           <Route exact path="/cohorts/team-asphalt" element={<Community />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
