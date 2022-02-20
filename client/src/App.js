@@ -7,7 +7,6 @@ import Homepage from "./components/Homepage";
 import Community from "./components/views/Community";
 import AuthDetails from "./components/views/AuthDetails";
 import SignUp from "./components/SignUp";
-import Login from "./components/Login";
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
           <Route exact path="/cohorts/team-asphalt" element={<Community />} />
           <Route exact path="/register/details" element={<AuthDetails />} />
           <Route exact path="/register/signup" element={<SignUp />} />
-          <Route exact path="/register/signin" element={<Login />} />
         </Routes>
 
         <Footer />
