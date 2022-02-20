@@ -15,24 +15,22 @@ import {
   UnderLine,
 } from "./Register";
 
-const SignUp = () => {
+const Login = () => {
   const profileCtx = useContext(AuthContext);
 
   const emailRef = useRef();
   const passwordRef = useRef();
-  const userNameRef = useRef();
 
   const submitHandler = (e) => {
     e.preventDefault();
 
     const enteredEmail = emailRef.current.value;
     const enteredPassword = passwordRef.current.value;
-    const enteredUserName = userNameRef.current.value;
 
     let token;
 
     let url =
-      "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyA9qngTQ2kQOuahg4Y6ZodqIBo-sTXXvDI";
+      "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA9qngTQ2kQOuahg4Y6ZodqIBo-sTXXvDI";
 
     fetch(url, {
       method: "POST",
@@ -58,26 +56,8 @@ const SignUp = () => {
         }
       })
       .then((data) => {
-        token = data.idToken;
-        fetch(
-          "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyA9qngTQ2kQOuahg4Y6ZodqIBo-sTXXvDI",
-          {
-            method: "POST",
-            body: JSON.stringify({
-              idToken: data.idToken,
-              displayName: enteredUserName,
-              photoUrl: "",
-              returnSecureToken: false,
-            }),
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        )
-          .then((res) => res.json())
-          .then((data) => {
-            profileCtx.login(token, data.displayName);
-          });
+        profileCtx.login(data.displayName, data.idToken);
+        console.log(data);
       })
       .catch((err) => {
         alert(err.message);
@@ -86,22 +66,21 @@ const SignUp = () => {
   return (
     <Container>
       <SubContainer>
-        <SubHeading style={{ textAlign: "left" }}>Welcome to,Sista</SubHeading>
+        <SubHeading style={{ textAlign: "left" }}>Welcome back</SubHeading>
         <UnderLine style={{ margin: 0 }} />
         <PopupContainer>
           <PopupContainerLeft>
             <AuthForm onSubmit={submitHandler}>
-              <AuthInput ref={userNameRef} placeholder="userName" />
               <AuthInput ref={emailRef} placeholder="email" />
               <AuthInput ref={passwordRef} placeholder="Password" />
               <Button>Proceed Now -&gt;</Button>
               <LinkText>
-                Already registered?&nbsp;&nbsp;{" "}
+                Didn't registered yet? &nbsp;&nbsp;
                 <a
                   style={{ textDecoration: "inherit" }}
-                  href="/register/signin"
+                  href="/register/signup"
                 >
-                  Sign in here
+                  Sign up here
                 </a>
               </LinkText>
             </AuthForm>
@@ -152,4 +131,4 @@ export const AuthInput = styled.input`
   height: 45px;
   width: 320px;
 `;
-export default SignUp;
+export default Login;

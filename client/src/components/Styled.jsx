@@ -21,6 +21,34 @@ export const Highlight = styled.span`
     font-weight: bolder;
 `;
 
+export const Card = styled.a`
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    color: black;
+    background-color: #ffeddf;
+    text-decoration: none;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 30px;
+    gap: 10px;
+`;
+
+export const CardTitle = styled.h1`
+    font-size: 35px;
+    margin: 0;
+`;
+
+export const CardAbout = styled.h2`
+    width: 80%;
+    font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 10px;
+`;
+
 export const BackToTop = styled.button`
     display: flex;
     flex-direction: column;

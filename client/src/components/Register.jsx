@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import AuthImage from "../assets/Auth.png";
 
 const Register = () => {
   return (
@@ -24,9 +25,19 @@ const Register = () => {
                 a!
               </li>
             </ListItems>
-            <Button>Sign up as a Mentee</Button>
+            <Button>
+              <a style={{ textDecoration: "inherit" }} href="/register/signup">
+                Sign up as a Mentee
+              </a>
+            </Button>
             <LinkText>
-              Already registered? <a href="/SignIn"> Sign in here</a>
+              Already registered?&nbsp;&nbsp;
+              <a
+                style={{ textDecoration: "inherit", color: "black" }}
+                href="/register/signin"
+              >
+                Sign in here
+              </a>
             </LinkText>
           </PopupContainerLeft>
           <Divider />
@@ -46,9 +57,19 @@ const Register = () => {
                 a!
               </li>
             </ListItems>
-            <Button>Sign up as a Mentor</Button>
+            <Button>
+              <a style={{ textDecoration: "inherit" }} href="/register/signup">
+                Sign up as a Mentor
+              </a>
+            </Button>
             <LinkText>
-              Already registered? <a href="/SignIn"> Sign in here</a>
+              Already registered?&nbsp;&nbsp;
+              <a
+                style={{ textDecoration: "inherit", color: "black" }}
+                href="/register/signin"
+              >
+                Sign in here
+              </a>
             </LinkText>
           </PopupContainerRight>
         </PopupContainer>
@@ -60,7 +81,7 @@ const Register = () => {
 export const Container = styled.div`
   min-height: 91vh;
   max-width: 100vw;
-  background: url("./Auth.png") no-repeat center center fixed;
+  background: url(${AuthImage}) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
