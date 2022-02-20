@@ -1,12 +1,14 @@
 import "./App.css";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
     return (
         <div className="App">
             <Navbar></Navbar>
             <Container></Container>
+            <Footer></Footer>
         </div>
     );
 }
