@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const image =
@@ -130,7 +131,9 @@ const AuthDetails = () => (
         <Heading2 className="text">Any other relevant links :</Heading2>
         <Input type="text" placeholder="" />
       </Wrapper>
-      <Button>Submit</Button>
+      <Link to="/suggestions">
+        <Button>Submit</Button>
+      </Link>
     </HeadingsContainer>
   </>
 );

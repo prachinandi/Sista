@@ -73,7 +73,7 @@ const Login = () => {
             <AuthForm onSubmit={submitHandler}>
               <AuthInput ref={emailRef} placeholder="email" />
               <AuthInput ref={passwordRef} placeholder="Password" />
-              <Button>Proceed Now -&gt;</Button>
+              <Button>Sign In -&gt;</Button>
               <LinkText>
                 Didn't registered yet? &nbsp;&nbsp;
                 <a

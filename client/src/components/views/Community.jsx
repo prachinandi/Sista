@@ -27,6 +27,7 @@ const Button = styled.button`
 const HeroButton = styled(Button)`
   margin-top: 420px;
   margin-right: 260px;
+  margin-left: 560px;
 `;
 
 const HeadingsContainer = styled.div`

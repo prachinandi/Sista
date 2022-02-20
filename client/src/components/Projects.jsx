@@ -65,6 +65,7 @@ const ProjectText = styled.div`
 const ProjectHeading = styled(Heading)`
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
+    text-align: right;
 `;
 
 const ProjectImage = styled.img`
