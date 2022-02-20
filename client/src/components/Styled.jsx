@@ -16,3 +16,33 @@ export const Button = styled.button`
         background-color: #f897c1;
     }
 `;
+
+export const Highlight = styled.span`
+    font-weight: bolder;
+`;
+
+export const BackToTop = styled.button`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 9999;
+
+    &:hover {
+        background-color: #ffeddf;
+    }
+
+    & > span {
+        display: flex;
+    }
+`;
