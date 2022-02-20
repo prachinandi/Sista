@@ -1,12 +1,11 @@
-import "./App.css";
-import styled from "styled-components";
-import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Footer from "./components/Footer";
-import Homepage from "./components/Homepage";
+import './App.css';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer';
+import Homepage from './components/Homepage';
 
-import Community from "./components/views/Community";
-import Register from "./components/Register";
+import Community from './components/views/Community';
+import AuthDetails from './components/views/AuthDetails';
 
 function App() {
   return (
@@ -14,12 +13,12 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
+
+          <Route exact path="/" element={<Homepage />} />
           <Route exact path="/cohorts/team-asphalt" element={<Community />} />
+          <Route exact path="/register/details" element={<AuthDetails />} />
         </Routes>
-        <Routes>
-          <Route exact path="/register" element={<Register />} />
-        </Routes>
-        <Homepage />
+
         <Footer />
       </Router>
     </div>
